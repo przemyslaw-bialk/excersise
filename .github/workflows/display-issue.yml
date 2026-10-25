@@ -1,0 +1,8 @@
+name: Display issue,
+on: workflow-dispatch
+jobs:
+  display-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: disaply issue message
+        run: echo "${{toJSON(github)}}"
