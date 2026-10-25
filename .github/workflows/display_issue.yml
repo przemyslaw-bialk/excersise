@@ -1,8 +1,12 @@
-name: Display issue,
-on: workflow_dispatch
+name: Display issue
+on:
+  issues:
+    types: [opened, edited]
+  label:
+    types: [created]
 jobs:
   display-issue:
     runs-on: ubuntu-latest
     steps:
-      - name: disaply issue message
-        run: echo "${{toJSON(github)}}"
+      - name: display issue message
+        run: echo "${{ toJSON(github) }}"
