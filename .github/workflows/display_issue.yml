@@ -1,5 +1,5 @@
 name: Display issue,
-on: workflow-dispatch
+on: workflow_dispatch
 jobs:
   display-issue:
     runs-on: ubuntu-latest
